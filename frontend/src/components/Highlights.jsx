@@ -87,6 +87,7 @@ const HighlightsWrapper = styled.section`
     animation-range: entry 0% cover 30%;
 
     img {
+      border-radius: 10px;
       width: 100%;
       height: auto;
     }

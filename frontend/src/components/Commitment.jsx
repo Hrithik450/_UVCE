@@ -18,15 +18,6 @@ const Animation = keyframes`
   }
 `;
 
-const diagonalAnimation = keyframes`
-  from {
-    transform: translate(-100%, -100%); /* Start from top-left (diagonal) */
-  }
-  to {
-    transform: translate(0%, 0%); /* End at original position */
-  }
-`;
-
 const CommitmentWrapper = styled.section`
   padding: 2rem 20px;
   max-width: 1280px;
@@ -121,12 +112,16 @@ const CommitmentWrapper = styled.section`
       animation: ${Animation} linear;
       animation-timeline: view();
       animation-range: entry 0% cover 30%;
-
+      overflow: hidden;
       @media (max-width: 768px) {
         width: 100%;
       }
 
       img {
+        transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg)
+          rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        transform-style: preserve-3d;
+        will-change: transform;
         border-radius: 10px;
         width: 100%;
         height: 100%;

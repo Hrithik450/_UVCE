@@ -222,7 +222,7 @@ const Button = styled.button`
   background-color: transparent;
   color: white;
   font-weight: 700;
-  font-size: 1rem;
+  font-size: 1.2rem;
   padding: 0.5rem 2rem;
   border: 2px solid white;
   border-radius: 3px;

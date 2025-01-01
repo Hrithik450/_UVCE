@@ -241,27 +241,6 @@ const GlobalStyles = styled.div`
   position: absolute;
 `;
 
-const Damping = keyframes`
-  0% {
-    transform: translateX(0);
-  }
-  20% {
-    transform: translateX(30px); 
-  }
-  40% {
-    transform: translateX(-15px); 
-  }
-  60% {
-    transform: translateX(8px); 
-  }
-  80% {
-    transform: translateX(-4px); 
-  }
-  100% {
-    transform: translateX(0);
-  }
-`;
-
 const MainContainer = styled.div`
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease-in-out;
@@ -334,12 +313,11 @@ const MainContainer = styled.div`
   }
 
   .hp-button {
-     width: ${(props) => props.minWidth};
-     position: fixed;
-     bottom: 0%;
-     margin-bottom: 0.5rem; 
+     width: 280px;
+     margin: 2rem 0 0 0;
      border-top: 2px solid gray;
      animation: ${Animation} 0.3s linear;
+     background-color: white;
     }
 
   .link {

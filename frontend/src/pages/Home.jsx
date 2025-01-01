@@ -1,6 +1,14 @@
-import React from "react";
 import styled, { keyframes } from "styled-components";
-import Navbar from "./Navbar/Navbar";
+import Footer from "../components/Footer";
+import Commitment from "../components/Commitment";
+import AcademicOfferings from "../components/AcademicOffers";
+import AdmissionProcessWrapper from "../components/Admission";
+import TestimonialsWrapper from "../components/Testimonals";
+import ArticlesWrapper from "../components/Articles";
+import CalltoAction from "../components/CTA";
+import Highlights from "../components/MainHighLights";
+import UVCEHighlights from "../components/Highlights";
+import React from "react";
 
 import { AiTwotoneFileExclamation } from "react-icons/ai";
 import { MdHome, MdMessage } from "react-icons/md";
@@ -8,6 +16,7 @@ import { FaReact } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { BsCartCheck } from "react-icons/bs";
 import { IoMdLogIn } from "react-icons/io";
+import Navbar from "../components/Navbar/Navbar";
 
 const object = {
   theme: "dark",
@@ -206,19 +215,39 @@ const object = {
   ],
 };
 
-export default function Hero({ title, desc }) {
+function Home() {
   return (
-    <>
+    <Container>
       <Header>
         <Navbar object={object} />
         <Content>
-          <h1>{title}</h1>
-          <P>{desc || "First State Autonomous University On IIT Model"}</P>
+          <h1>University of Visvesvaraya College of Engineering</h1>
+          <P>First State Autonomous University On IIT Model</P>
+          <button className="tour-button">Take a Tour</button>
         </Content>
       </Header>
-    </>
+
+      <Main>
+        <Commitment />
+        <UVCEHighlights />
+        <HighlightSection>
+          <Highlights />
+        </HighlightSection>
+        <ArticlesWrapper />
+        <AcademicOfferings />
+        <AdmissionProcessWrapper />
+        <ReviewSection>
+          <TestimonialsWrapper />
+        </ReviewSection>
+        <CalltoAction />
+      </Main>
+
+      <Footer />
+    </Container>
   );
 }
+
+export default Home;
 
 const HeadAnimation = keyframes`
   from {
@@ -242,8 +271,14 @@ const TextAnimation = keyframes`
   }
 `;
 
+const Container = styled.div`
+  position: relative;
+  background-color: #f0f0f0;
+  width: 100%;
+`;
+
 const Header = styled.header`
-  height: 50vh;
+  height: 80vh;
   width: 100%;
   position: relative;
   background: url("https://wallpaperaccess.com/full/2137313.jpg") center/cover
@@ -262,6 +297,25 @@ const Header = styled.header`
     background-color: rgba(0, 0, 0, 0.6);
     opacity: 1;
     z-index: 1;
+  }
+
+  .tour-button {
+    margin-top: 20px;
+    padding: 1rem 1.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    background: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    animation: ${TextAnimation} 1s ease-in-out;
+    transition: all 150ms ease;
+    border: 1px solid white;
+
+    &:hover {
+      background-color: black;
+      transform: scale(1.2);
+    }
   }
 `;
 
@@ -290,5 +344,31 @@ const Content = styled.div`
 
   @media (max-width: 450px) {
     font-size: 1rem;
+  }
+`;
+
+const Main = styled.main``;
+
+const ReviewSection = styled.section`
+  background-color: black;
+  margin: 40px 0 0 0;
+  text-align: center;
+  padding: 2rem 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+`;
+
+const HighlightSection = styled.section`
+  background-color: none;
+  margin: 40px 0 0 0;
+  text-align: center;
+  padding: 2rem 20px;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
   }
 `;
