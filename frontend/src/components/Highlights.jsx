@@ -95,7 +95,7 @@ const HighlightsWrapper = styled.section`
 
 const UVCEHighlights = () => (
   <HighlightsWrapper>
-    <h2>UVCE Highlights</h2>
+    <h2>UVCE</h2>
     <div className="content">
       <div className="text-block">
         <div className="text-content">

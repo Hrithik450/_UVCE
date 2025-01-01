@@ -18,7 +18,7 @@ const ArticlesWrapper = styled.section`
   width: auto;
   margin: auto;
   @media (max-width: 768px) {
-    padding: 0rem 2rem;
+    padding: 2rem 2rem;
   }
 
   .header {

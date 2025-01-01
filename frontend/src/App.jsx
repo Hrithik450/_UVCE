@@ -17,12 +17,13 @@ import { FaReact } from "react-icons/fa6";
 import { FaUser } from "react-icons/fa";
 import { BsCartCheck } from "react-icons/bs";
 import { IoMdLogIn } from "react-icons/io";
+import Highlights from "./components/MainHighLights";
 
 const object = {
   theme: "dark",
   title: "UVCE",
   sizing: {
-    minWidth: "250px",
+    minWidth: "280px",
   },
   NavItems: [
     { title: "Home", type: "normal", href: "/", icon: <MdHome /> },
@@ -173,6 +174,9 @@ function App() {
       <Main>
         <Commitment />
         <UVCEHighlights />
+        <HighlightSection>
+          <Highlights />
+        </HighlightSection>
         <ArticlesWrapper />
         <AcademicOfferings />
         <AdmissionProcessWrapper />
@@ -294,9 +298,18 @@ const ReviewSection = styled.section`
   margin: 40px 0 0 0;
   text-align: center;
   padding: 2rem 20px;
-  animation: ${Animation} linear;
-  animation-timeline: view();
-  animation-range: entry 0% cover 30%;
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+`;
+
+const HighlightSection = styled.section`
+  background-color: none;
+  margin: 40px 0 0 0;
+  text-align: center;
+  padding: 2rem 20px;
 
   h2 {
     font-size: 2rem;

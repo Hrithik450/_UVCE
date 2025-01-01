@@ -3,6 +3,7 @@ import { BiSearch } from "react-icons/bi";
 import { AnimatePresence, motion, transform } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import styled, { keyframes } from "styled-components";
+import { useEffect, useState } from "react";
 
 const SideBar = ({ isOpen, setIsOpen, object }) => {
   const { NavItems } = object;
@@ -42,20 +43,29 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
     },
   };
 
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(max-width: 450px)");
+    const handleResize = () => setIsSmallScreen(mediaQuery.matches);
+    handleResize();
+    mediaQuery.addEventListener("change", handleResize);
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
   return (
     <>
       <GlobalStyles>
-        <MainContainer>
+        <MainContainer $isOpen={isOpen}>
           <motion.div
             animate={{
               width: isOpen ? object.sizing.minWidth : "0px",
-
-              transition: {
-                duration: 0.5,
-                type: "spring",
-                damping: 10,
-              },
             }}
+            transition={
+              isSmallScreen
+                ? { duration: 0.5, type: "spring", damping: 10 }
+                : undefined
+            }
             className="sidebar"
           >
             <div className="top_section">
@@ -231,8 +241,30 @@ const GlobalStyles = styled.div`
   position: absolute;
 `;
 
+const Damping = keyframes`
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(30px); 
+  }
+  40% {
+    transform: translateX(-15px); 
+  }
+  60% {
+    transform: translateX(8px); 
+  }
+  80% {
+    transform: translateX(-4px); 
+  }
+  100% {
+    transform: translateX(0);
+  }
+`;
+
 const MainContainer = styled.div`
   box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease-in-out;
   display: flex;
   position: fixed;
   z-index: 999;
@@ -243,7 +275,7 @@ const MainContainer = styled.div`
   .sidebar {
     height: 100vh;
     overflow-y: auto;
-    padding: 7px 0;
+    padding: 7px 0; 
   }
 
   .top_section {

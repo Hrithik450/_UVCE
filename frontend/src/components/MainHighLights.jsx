@@ -1,7 +1,6 @@
 "use client";
 import styled, { keyframes } from "styled-components";
 import Slider3 from "./Swiper";
-import { useSwiper } from "swiper/react";
 
 const Animation = keyframes`
   from {
@@ -14,15 +13,16 @@ const Animation = keyframes`
   }
 `;
 
-const TestimonialsWrapper = styled.section`
-  padding: 2rem 20px;
-  max-width: 1280px;
-  width: auto;
-  margin: auto;
+const HighlightsWrapper = styled.section`
   animation: ${Animation} linear;
   animation-timeline: view();
   animation-range: entry 0% cover 30%;
-  color: white;
+  padding: 0rem 20px;
+  max-width: 1280px;
+  width: auto;
+  margin: auto;
+
+  color: black;
   text-align: center;
 
   @media (max-width: 768px) {
@@ -33,8 +33,12 @@ const TestimonialsWrapper = styled.section`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 69%;
+    max-width: 100%;
     margin: 0 auto;
+
+    @media (max-width: 450px) {
+      max-width: 69%;
+    }
 
     button {
       height: 50px;
@@ -101,25 +105,25 @@ const slides = [
   {
     url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
+  {
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
+  },
+  {
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
+  },
 ];
 
-const Testimonials = () => {
+const Highlights = () => {
   return (
-    <TestimonialsWrapper>
-      <h2>What Our Student Say About Us</h2>
+    <HighlightsWrapper>
+      <h2>Highlights</h2>
       <div className="arrows">
         <button className="swiper-button-prev">&lt;</button>
-        <Slider3 slides={slides} color={"white"} />
+        <Slider3 slides={slides} color={"black"} />
         <button className="swiper-button-next">&gt;</button>
       </div>
-      <h3 className="title">Carmen Hodkiewicz</h3>
-      <p>Global Markets Engineer</p>
-      <p className="description">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at massa
-        sit amet nisi blandit vehicula adipiscing elit.
-      </p>
-    </TestimonialsWrapper>
+    </HighlightsWrapper>
   );
 };
 
-export default Testimonials;
+export default Highlights;

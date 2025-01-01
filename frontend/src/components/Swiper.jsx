@@ -11,7 +11,7 @@ import "swiper/css/autoplay";
 import { EffectCoverflow } from "swiper/modules";
 import styled from "styled-components";
 
-export default function Slider3({ slides }) {
+export default function Slider3({ slides, color }) {
   return (
     <StyledSwiper
       effect={"coverflow"}
@@ -34,7 +34,7 @@ export default function Slider3({ slides }) {
       modules={[EffectCoverflow, Navigation, Autoplay]}
     >
       {slides.map((slide, index) => (
-        <SwiperSlide className="slide-content" key={index}>
+        <SwiperSlide className="slide-content" $color={color} key={index}>
           <StyledImage src={slide.url} />
           <StyledH5>{slide.name || ""}</StyledH5>
           <StyledH4>{slide.title || ""}</StyledH4>
@@ -54,7 +54,7 @@ const StyledSwiper = styled(Swiper)`
     position: relative;
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid white;
+    border: 2px solid ${(props) => props.color};
   }
 
   .swiper-slide {

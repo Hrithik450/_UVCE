@@ -103,8 +103,8 @@ const CommitmentWrapper = styled.section`
       }
 
       @media (max-width: 450px) {
-        top: 35%;
-        left: 49%;
+        top: 27%;
+        left: 20%;
       }
     }
 
