@@ -74,19 +74,19 @@ const TestimonialsWrapper = styled.section`
 
 const slides = [
   {
-    url: "https://tse3.mm.bing.net/th?id=OIP.l0ai3Gemc84mnwkfBwywrAHaHa&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
   {
-    url: "https://tse4.mm.bing.net/th?id=OIP.OYbzbbyzogwtriubL2pP0AHaHa&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
   {
-    url: "https://tse3.mm.bing.net/th?id=OIP.l0ai3Gemc84mnwkfBwywrAHaHa&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
   {
-    url: "https://tse1.mm.bing.net/th?id=OIP.q2YsgHsjuMWvKbVbnp-aJwHaHa&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
   {
-    url: "https://tse3.mm.bing.net/th?id=OIP.l0ai3Gemc84mnwkfBwywrAHaHa&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
 ];
 

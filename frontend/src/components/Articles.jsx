@@ -131,17 +131,17 @@ const ArticlesWrapper = styled.section`
 const Information = [
   {
     type: "Announcement",
-    url: "https://tse3.mm.bing.net/th?id=OIP.tRupMyNKXmzeRMNhs-bwQAHaHa&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
     date: "08-Aug-2024",
   },
   {
     type: "workshop",
-    url: "https://tse4.mm.bing.net/th?id=OIP.e3KH7ximjCnTWCvgbI2GdwHaE8&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
     date: "09-Nov-2024",
   },
   {
     type: "seminar",
-    url: "https://tse2.mm.bing.net/th?id=OIP.o8d0STltT9yqVBNZrR96DgHaE8&pid=Api&P=0&h=180",
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
     date: "10-Dec-2024",
   },
 ];
