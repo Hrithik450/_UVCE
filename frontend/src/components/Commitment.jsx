@@ -77,6 +77,9 @@ const CommitmentWrapper = styled.section`
     }
 
     .badge {
+      animation: ${Animation} linear;
+      animation-timeline: view();
+      animation-range: entry 0% cover 30%;
       position: absolute;
       z-index: 5;
       top: 25%;
