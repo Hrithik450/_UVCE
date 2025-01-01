@@ -380,8 +380,7 @@ const MainContainer = styled.div`
       margin-left: 10px;
       border-radius: 5px;
       background: rgb(238, 238, 238);
-    }
-      
+    }  
   }
 
   .routes {
