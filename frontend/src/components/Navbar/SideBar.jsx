@@ -4,6 +4,7 @@ import { AnimatePresence, motion, transform } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import styled, { keyframes } from "styled-components";
 import { useEffect, useState } from "react";
+import { NavLink } from "react-router-dom";
 
 const SideBar = ({ isOpen, setIsOpen, object }) => {
   const { NavItems } = object;
@@ -111,7 +112,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                   return (
                     item.items &&
                     item.items.map((it, idx) => (
-                      <a key={`${it}-${idx}`} href={it.href}>
+                      <NavLink key={`${it}-${idx}`} to={it.href}>
                         <div
                           className={
                             window.location.pathname === it.href
@@ -134,17 +135,17 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                             )}
                           </AnimatePresence>
                         </div>
-                      </a>
+                      </NavLink>
                     ))
                   );
                 }
 
                 if (item.type === "button") {
                   return (
-                    <a
+                    <NavLink
                       className="button-parent"
                       key={`${item}-${index}`}
-                      href={item.href}
+                      to={item.href}
                     >
                       {isOpen && (
                         <div
@@ -167,7 +168,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                           </AnimatePresence>
                         </div>
                       )}
-                    </a>
+                    </NavLink>
                   );
                 }
 
@@ -185,7 +186,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                 }
 
                 return (
-                  <a key={`${item}-${index}`} href={item.href}>
+                  <NavLink key={`${item}-${index}`} to={item.href}>
                     <div
                       className={
                         window.location.pathname === item.href
@@ -208,7 +209,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                         )}
                       </AnimatePresence>
                     </div>
-                  </a>
+                  </NavLink>
                 );
               })}
             </section>
@@ -335,9 +336,11 @@ const MainContainer = styled.div`
     text-decoration: none;
   }
 
+  @media (max-width: 450px) {
   .active {
     border-right: 4px solid white;
     background: rgba(255, 253, 208, 0.6);
+   }
   }
 
   .link_text {

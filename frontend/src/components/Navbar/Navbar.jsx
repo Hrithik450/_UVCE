@@ -3,6 +3,7 @@ import styled, { keyframes } from "styled-components";
 import SideBar from "./SideBar";
 import { FaBars } from "react-icons/fa6";
 import MenuBar from "./Menubar";
+import { NavLink } from "react-router-dom";
 
 const Navbar = ({ object }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -49,7 +50,7 @@ const Navbar = ({ object }) => {
                 ) : (
                   <NavItem
                     key={`${nav}-${idx}`}
-                    href={nav.href}
+                    to={nav.href}
                     $isactive={currentPath === nav.href ? "true" : "false"}
                   >
                     {nav.title}
@@ -187,7 +188,7 @@ const DropNavItem = styled.div`
   }
 `;
 
-const NavItem = styled.a`
+const NavItem = styled(NavLink)`
   animation: ${Animation} 1s ease-in-out;
   display: flex;
   align-items: center;

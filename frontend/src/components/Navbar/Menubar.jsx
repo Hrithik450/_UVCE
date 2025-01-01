@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import { FaCaretUp, FaCaretDown } from "react-icons/fa6";
+import { NavLink } from "react-router-dom";
 
 const MenuBar = ({ type, object, categories, name }) => {
   const [isHovered, setIsHovered] = useState(false);
@@ -36,7 +37,7 @@ const MenuBar = ({ type, object, categories, name }) => {
         )}
       </DropMenuItem>
     ) : (
-      <MenuItem href={category.href}>
+      <MenuItem to={category.href}>
         {category.title}
         {category.items && <FaCaretDown />}
         {category.items && (
@@ -159,7 +160,7 @@ const sharedStyles = `
   column-gap: 2rem;
 `;
 
-const MenuItem = styled.a`
+const MenuItem = styled(NavLink)`
   ${sharedStyles}
   background-color: white;
   color: black;

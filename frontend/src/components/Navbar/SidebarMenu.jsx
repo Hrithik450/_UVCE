@@ -1,6 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState, useEffect } from "react";
 import { FaAngleDown } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const menuAnimation = {
@@ -114,14 +115,14 @@ const SidebarMenu = ({ item, showAnimation, isOpen, setIsOpen, object }) => {
                     key={`${it}-${i}`}
                     custom={i}
                   >
-                    <a href={it.href}>
+                    <NavLink to={it.href}>
                       <div className="link" $object={object}>
                         <div className="icon">{it.icon}</div>
                         <motion.div className="link_text">
                           {it.title}
                         </motion.div>
                       </div>
-                    </a>
+                    </NavLink>
                   </motion.div>
                 );
               })}
