@@ -11,6 +11,13 @@ import React from "react";
 import Navbar from "./components/Navbar/Navbar";
 import "./App.css";
 
+import { AiTwotoneFileExclamation } from "react-icons/ai";
+import { MdHome, MdMessage } from "react-icons/md";
+import { FaReact } from "react-icons/fa6";
+import { FaUser } from "react-icons/fa";
+import { BsCartCheck } from "react-icons/bs";
+import { IoMdLogIn } from "react-icons/io";
+
 const object = {
   theme: "dark",
   title: "UVCE",
@@ -18,66 +25,66 @@ const object = {
     minWidth: "250px",
   },
   NavItems: [
-    { title: "Home", type: "normal", href: "/", icon: "MdHome" },
-    { title: "People", type: "normal", href: "/people", icon: "MdHome" },
+    { title: "Home", type: "normal", href: "/", icon: <MdHome /> },
+    { title: "People", type: "normal", href: "/people", icon: <MdHome /> },
 
     {
       title: "Departments",
-      icon: "AiTwotoneFileExclamation",
+      icon: <AiTwotoneFileExclamation />,
       type: "dropdown",
       items: [
         {
           title: "Department of civil",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
           items: [
-            { title: "UG - B.Tech", href: "/btech", icon: "FaReact" },
-            { title: "PG - M.Tech", href: "/btech", icon: "FaReact" },
-            { title: "Phd", href: "/btech", icon: "FaReact" },
+            { title: "UG - B.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "PG - M.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "Phd", href: "/btech", icon: <FaReact /> },
           ],
         },
         {
           title: "Department of Mechanical",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
           items: [
-            { title: "UG - B.Tech", href: "/btech", icon: "FaReact" },
-            { title: "PG - M.Tech", href: "/btech", icon: "FaReact" },
-            { title: "Phd", href: "/btech", icon: "FaReact" },
+            { title: "UG - B.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "PG - M.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "Phd", href: "/btech", icon: <FaReact /> },
           ],
         },
         {
           title: "Department of EEE",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
           items: [
-            { title: "UG - B.Tech", href: "/btech", icon: "FaReact" },
-            { title: "PG - M.Tech", href: "/btech", icon: "FaReact" },
-            { title: "Phd", href: "/btech", icon: "FaReact" },
+            { title: "UG - B.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "PG - M.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "Phd", href: "/btech", icon: <FaReact /> },
           ],
         },
         {
           title: "Department of ECE",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
           items: [
-            { title: "UG - B.Tech", href: "/btech", icon: "FaReact" },
-            { title: "PG - M.Tech", href: "/btech", icon: "FaReact" },
-            { title: "Phd", href: "/btech", icon: "FaReact" },
+            { title: "UG - B.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "PG - M.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "Phd", href: "/btech", icon: <FaReact /> },
           ],
         },
         {
           title: "Department of CSE",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
           items: [
-            { title: "UG - B.Tech", href: "/btech", icon: "FaReact" },
-            { title: "PG - M.Tech", href: "/btech", icon: "FaReact" },
-            { title: "Phd", href: "/btech", icon: "FaReact" },
+            { title: "UG - B.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "PG - M.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "Phd", href: "/btech", icon: <FaReact /> },
           ],
         },
         {
           title: "Department of Architecture",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
           items: [
-            { title: "UG - B.Tech", href: "/btech", icon: "FaReact" },
-            { title: "PG - M.Tech", href: "/btech", icon: "FaReact" },
-            { title: "Phd", href: "/btech", icon: "FaReact" },
+            { title: "UG - B.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "PG - M.Tech", href: "/btech", icon: <FaReact /> },
+            { title: "Phd", href: "/btech", icon: <FaReact /> },
           ],
         },
       ],
@@ -86,54 +93,59 @@ const object = {
       title: "Academics",
       type: "normal",
       href: "/academics",
-      icon: "FaUser",
+      icon: <FaUser />,
     },
 
-    { title: "Faculty", type: "normal", href: "#", icon: "MdMessage" },
-    { title: "Students", type: "normal", href: "#", icon: "MdMessage" },
+    { title: "Faculty", type: "normal", href: "#", icon: <MdMessage /> },
+    { title: "Students", type: "normal", href: "#", icon: <MdMessage /> },
 
     {
       title: "More",
       type: "LastDropdown",
-      icon: "AiTwotoneFileExclamation",
+      icon: <AiTwotoneFileExclamation />,
       items: [
         {
           title: "Faculties & Infrastructure",
           type: "normal",
           href: "/android",
-          icon: "BsCartCheck",
+          icon: <BsCartCheck />,
         },
 
         {
           title: "Library",
           type: "normal",
           href: "#",
-          icon: "BsCartCheck",
+          icon: <BsCartCheck />,
         },
-        { title: "Placements", type: "normal", href: "#", icon: "BsCartCheck" },
+        {
+          title: "Placements",
+          type: "normal",
+          href: "#",
+          icon: <BsCartCheck />,
+        },
         {
           title: "Alumini",
           type: "normal",
           href: "#",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
         },
         {
           title: "Careers",
           type: "normal",
           href: "#",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
         },
         {
           title: "Notifications",
           type: "normal",
           href: "#",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
         },
         {
           title: "About Us",
           type: "normal",
           href: "#",
-          icon: "AiTwotoneFileExclamation",
+          icon: <AiTwotoneFileExclamation />,
         },
       ],
     },
@@ -141,7 +153,7 @@ const object = {
       name: "Login",
       type: "button",
       href: "/Login",
-      icon: "IoMdLogIn",
+      icon: <IoMdLogIn />,
     },
   ],
 };

@@ -3,98 +3,10 @@ import { BiSearch } from "react-icons/bi";
 import { AnimatePresence, motion, transform } from "framer-motion";
 import SidebarMenu from "./SidebarMenu";
 import styled, { keyframes } from "styled-components";
-import * as BsIcons from "react-icons/bs";
-import * as BxIcons from "react-icons/bi";
-import * as CiIcons from "react-icons/ci";
-import * as CgIcons from "react-icons/cg";
-import * as DiIcons from "react-icons/di";
-import * as FiIcons from "react-icons/fi";
-import * as FcIcons from "react-icons/fc";
-import * as FaIcons from "react-icons/fa";
-import * as Fa6Icons from "react-icons/fa6";
-import * as GiIcons from "react-icons/gi";
-import * as GoIcons from "react-icons/go";
-import * as GrIcons from "react-icons/gr";
-import * as HiIcons from "react-icons/hi";
-import * as Hi2Icons from "react-icons/hi2";
-import * as LiaIcons from "react-icons/lia";
-import * as IoIcons from "react-icons/io";
-import * as Io5Icons from "react-icons/io5";
-import * as LuIcons from "react-icons/lu";
-import * as MdIcons from "react-icons/md";
-import * as PiIcons from "react-icons/pi";
-import * as RxIcons from "react-icons/rx";
-import * as RiIcons from "react-icons/ri";
-import * as SiIcons from "react-icons/si";
-import * as SlIcons from "react-icons/sl";
-import * as TbIcons from "react-icons/tb";
-import * as TfiIcons from "react-icons/tfi";
-import * as TiIcons from "react-icons/ti";
-import * as VscIcons from "react-icons/vsc";
-import * as WiIcons from "react-icons/wi";
-import * as AiIcons from "react-icons/ai";
 
 const SideBar = ({ isOpen, setIsOpen, object }) => {
   const { NavItems } = object;
   const toggle = () => setIsOpen(!isOpen);
-
-  const libraries = {
-    Bs: BsIcons,
-    Bi: BxIcons,
-    Ci: CiIcons,
-    Cg: CgIcons,
-    Di: DiIcons,
-    Fi: FiIcons,
-    Fc: FcIcons,
-    Fa: FaIcons,
-    Fa6: Fa6Icons,
-    Gi: GiIcons,
-    Go: GoIcons,
-    Gr: GrIcons,
-    Hi: HiIcons,
-    Hi2: Hi2Icons,
-    Lia: LiaIcons,
-    Io: IoIcons,
-    Io5: Io5Icons,
-    Lu: LuIcons,
-    Md: MdIcons,
-    Pi: PiIcons,
-    Rx: RxIcons,
-    Ri: RiIcons,
-    Si: SiIcons,
-    Sl: SlIcons,
-    Tb: TbIcons,
-    Tfi: TfiIcons,
-    Ti: TiIcons,
-    Vsc: VscIcons,
-    Wi: WiIcons,
-    Ai: AiIcons,
-  };
-
-  const DynamicIcon = ({ name }) => {
-    if (!name) return null;
-    let IconComponent;
-
-    if (name.startsWith("Lia")) {
-      IconComponent = LiaIcons[name];
-    } else if (name.startsWith("Io5")) {
-      IconComponent = Io5Icons[name];
-    } else if (name.startsWith("Fa6")) {
-      IconComponent = Fa6Icons[name];
-    } else if (name.startsWith("Hi2")) {
-      IconComponent = Hi2Icons[name];
-    } else if (name.startsWith("Tfi")) {
-      IconComponent = TfiIcons[name];
-    } else if (name.startsWith("Vsc")) {
-      IconComponent = VscIcons[name];
-    } else {
-      const prefix = name.slice(0, 2);
-      const library = libraries[prefix];
-      IconComponent = library ? library[name] : null;
-    }
-
-    return IconComponent ? <IconComponent /> : null;
-  };
 
   const inputAnimation = {
     hidden: {
@@ -197,9 +109,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                               : "link"
                           }
                         >
-                          <div className="icon">
-                            <DynamicIcon name={it.icon} />
-                          </div>
+                          <div className="icon">{it.icon}</div>
                           <AnimatePresence>
                             {isOpen && (
                               <motion.div
@@ -231,9 +141,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                           className="link hp-button"
                           $minWidth={object.sizing.minWidth}
                         >
-                          <div className="icon">
-                            <DynamicIcon name={item.icon} />
-                          </div>
+                          <div className="icon">{item.icon}</div>
                           <AnimatePresence>
                             {isOpen && (
                               <motion.div
@@ -275,9 +183,7 @@ const SideBar = ({ isOpen, setIsOpen, object }) => {
                           : "link"
                       }
                     >
-                      <div className="icon">
-                        <DynamicIcon name={item.icon} />
-                      </div>
+                      <div className="icon">{item.icon}</div>
                       <AnimatePresence>
                         {isOpen && (
                           <motion.div
