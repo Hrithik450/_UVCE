@@ -54,6 +54,7 @@ const StyledSwiper = styled(Swiper)`
     position: relative;
     border-radius: 10px;
     overflow: hidden;
+    border: 2px solid white;
   }
 
   .swiper-slide {
