@@ -72,17 +72,6 @@ const Animation = keyframes`
   }
 `;
 
-const TextAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-`;
-
 const ResearchSection = styled.section`
   padding: 2rem 20px;
   max-width: 1280px;
