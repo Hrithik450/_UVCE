@@ -133,9 +133,9 @@ const object = {
       ],
     },
     {
-      title: "Academics",
+      title: "Research",
       type: "normal",
-      href: "/academics",
+      href: "/research",
       icon: <FaUser />,
     },
 

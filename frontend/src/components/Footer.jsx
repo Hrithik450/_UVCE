@@ -42,10 +42,7 @@ const Footer = () => {
             <p>
               Email - <FooterSpan>info@campusuvce.in</FooterSpan>
             </p>
-            <NavLinkItem>
-              Plan a visit
-              {/* <StyledNavLink to="/">Plan a visit</StyledNavLink> */}
-            </NavLinkItem>
+            <NavLinkItem>Plan a visit</NavLinkItem>
           </FooterDetails>
         </Footer3>
       </FooterSec1>
@@ -110,6 +107,9 @@ const FooterHeading = styled.h4`
 const FooterPara = styled.p`
   font-family: "Inconsolata", monospace;
   line-height: 1.5rem;
+  @media (max-width: 450px) {
+    font-size: 0.8rem;
+  }
 `;
 
 const Footer1 = styled.div`
@@ -125,6 +125,10 @@ const Footer3 = styled.div`
 `;
 
 const FooterList = styled.ul`
+  @media (max-width: 450px) {
+    font-size: 0.8rem;
+  }
+
   li {
     margin-top: 1rem;
     font-family: "Inconsolata", monospace;
@@ -145,6 +149,9 @@ const FooterList = styled.ul`
 `;
 
 const FooterDetails = styled.div`
+  @media (max-width: 450px) {
+    font-size: 0.8rem;
+  }
   p {
     margin-top: 0.5rem;
     font-family: "Inconsolata", monospace;

@@ -18,8 +18,8 @@ import Placements from "./pages/Placements";
 import Alumini from "./pages/Alumini";
 import Careers from "./pages/Careers";
 import Notifications from "./pages/Notifications";
-import AcademicsUvce from "./pages/AcademicsUvce";
 import Login from "./pages/Auth/Login";
+import Research from "./pages/Research";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
           <Route path="Architecture" element={<Architecture />} />
         </Route>
         <Route path="/about" element={<About />} />
-        <Route path="/academics" element={<AcademicsUvce />} />
+        <Route path="/research" element={<Research />} />
         <Route path="/faculty" element={<Faculty />} />
         <Route path="/students" element={<Students />} />
         <Route path="/infrastructure" element={<Infrastructure />} />
