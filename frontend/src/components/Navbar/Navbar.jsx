@@ -144,6 +144,12 @@ const NavItemContainer = styled.div`
   display: flex;
   justify-content: space-between;
 
+  @media (min-width: 1280px) {
+    .active {
+      border-bottom: 3px solid white;
+    }
+  }
+
   @media (max-width: 1280px) {
     gap: 1rem;
   }
@@ -172,8 +178,6 @@ const DropNavItem = styled.div`
   text-align: center;
   width: max-content;
   font-size: 1.3rem;
-  ${(props) =>
-    props.isActive ? "border-bottom: 3px solid black;" : "border-bottom: none;"}
 
   @media (max-width: 1180px) {
     display: none;
@@ -200,10 +204,6 @@ const NavItem = styled(NavLink)`
   text-align: center;
   width: max-content;
   font-size: 1.3rem;
-  ${(props) =>
-    props.isactive === "true"
-      ? "border-bottom: 3px solid black;"
-      : "border-bottom: none;"}
 
   @media (max-width: 1180px) {
     display: none;

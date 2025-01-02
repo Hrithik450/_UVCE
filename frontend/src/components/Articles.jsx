@@ -17,6 +17,7 @@ const ArticlesWrapper = styled.section`
   max-width: 1280px;
   width: auto;
   margin: auto;
+
   @media (max-width: 768px) {
     padding: 2rem 2rem;
   }

@@ -147,7 +147,6 @@ const object = {
       href: "/academics",
       icon: <FaUser />,
     },
-
     { title: "Faculty", type: "normal", href: "/faculty", icon: <MdMessage /> },
     {
       title: "Students",
