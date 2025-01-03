@@ -27,8 +27,8 @@ export default function Slider3({ slides, color }) {
         slideShadows: true,
       }}
       navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
+        nextEl: ".highlight-button-next",
+        prevEl: ".highlight-button-prev",
       }}
       autoplay={{ delay: 1000 }}
       modules={[EffectCoverflow, Navigation, Autoplay]}

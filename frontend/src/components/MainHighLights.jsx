@@ -118,9 +118,9 @@ const Highlights = () => {
     <HighlightsWrapper>
       <h2>Highlights</h2>
       <div className="arrows">
-        <button className="swiper-button-prev">&lt;</button>
+        <button className="highlight-button-prev">&lt;</button>
         <Slider3 slides={slides} color={"black"} />
-        <button className="swiper-button-next">&gt;</button>
+        <button className="highlight-button-next">&gt;</button>
       </div>
     </HighlightsWrapper>
   );
