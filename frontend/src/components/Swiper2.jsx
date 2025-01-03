@@ -41,7 +41,7 @@ const MySwiper = styled.section`
   }
 
   .swiper-slide {
-    height: 350px;
+    height: 400px;
     text-align: center;
     font-size: 18px;
     background: #fff;
@@ -50,6 +50,10 @@ const MySwiper = styled.section`
     align-items: center;
     border-radius: 10px;
     overflow: hidden;
+
+    @media (max-width: 450px) {
+      height: 300px;
+    }
   }
 
   .swiper-slide img {

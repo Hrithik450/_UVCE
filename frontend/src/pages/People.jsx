@@ -11,9 +11,6 @@ const People = () => {
   );
 };
 
-const Wrapper = styled.div`
-  .people {
-  }
-`;
+const Wrapper = styled.div``;
 
 export default People;

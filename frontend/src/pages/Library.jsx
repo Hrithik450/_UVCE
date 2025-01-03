@@ -169,17 +169,6 @@ const Animation = keyframes`
   }
 `;
 
-const TextAnimation = keyframes`
-  from {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-`;
-
 const LibrarySection = styled.section`
   padding: 2rem 20px;
   max-width: 1280px;
@@ -205,7 +194,7 @@ const LibrarySection = styled.section`
       font-size: 2rem;
       text-align: center;
       margin-bottom: 1rem;
-      animation: ${TextAnimation} 1000ms ease-in-out;
+      animation: ${Animation} 1000ms ease-in-out;
     }
   }
 
@@ -239,7 +228,7 @@ const LibrarySection = styled.section`
     h1 {
       font-size: 2rem;
       text-align: center;
-      animation: ${TextAnimation} 1000ms ease-in-out;
+      animation: ${Animation} 1000ms ease-in-out;
     }
   }
 
@@ -298,7 +287,7 @@ const LibrarySection = styled.section`
   }
 
   .search-section h3 {
-    animation: ${TextAnimation} 1000ms ease-in-out;
+    animation: ${Animation} 1000ms ease-in-out;
     font-size: 2rem;
     text-align: center;
   }

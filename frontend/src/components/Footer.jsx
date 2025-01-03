@@ -48,7 +48,7 @@ const Footer = () => {
       </FooterSec1>
       <FooterSec2>
         <p>
-          © UVCE 2024-2025 - All rights reserved | Designed and Developed by
+          ©UVCE 2025-2026 All rights reserved | Designed and Developed by
           <span>Hruthik M</span>
         </p>
       </FooterSec2>

@@ -101,6 +101,9 @@ const slides = [
   {
     url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
   },
+  {
+    url: "https://res.cloudinary.com/duozomapm/image/upload/v1735698363/uvce_1_vjbb83.jpg",
+  },
 ];
 
 const Testimonials = () => {
@@ -108,9 +111,9 @@ const Testimonials = () => {
     <TestimonialsWrapper>
       <h2>What Our Student Say About Us</h2>
       <div className="arrows">
-        <button className="swiper-button-prev">&lt;</button>
+        <button className="highlight-button-prev">&lt;</button>
         <Slider3 slides={slides} color={"white"} />
-        <button className="swiper-button-next">&gt;</button>
+        <button className="highlight-button-next">&gt;</button>
       </div>
       <h3 className="title">Carmen Hodkiewicz</h3>
       <p>Global Markets Engineer</p>
